@@ -1,7 +1,7 @@
 from behave import given, when, then
 
-from pages.inventory_page import InventoryPage
-from pages.login_page import LoginPage
+from tests.ui_tests.pages.inventory_page import InventoryPage
+from tests.ui_tests.pages.login_page import LoginPage
 
 
 @given('user navigates to "{url}"')

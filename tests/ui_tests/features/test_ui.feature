@@ -9,7 +9,7 @@ Feature: Login and shopping cart on Inventory page
     Then user should see "Products" page header
     And user should see "6" items in inventory table
 
-  Scenario: User is able to add products in cart
+  Scenario: User is able to add products in shopping cart
     When user logins with "standard_user" login and "secret_sauce" password
     And user presses "Add to cart" button under "Sauce Labs Backpack" product
     Then user should see "1" item(s) in shopping cart

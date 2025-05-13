@@ -7,6 +7,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 def before_scenario(context, scenario):
+    print(f"\nScenario: {scenario.name}\n")
     service = Service(ChromeDriverManager().install())
     options = Options()
     options.add_argument("--incognito")
@@ -15,6 +16,7 @@ def before_scenario(context, scenario):
 
 
 def after_scenario(context, scenario):
+    print(f"'{scenario.name}' scenario has passed")
     context.driver.quit()
 
 
@@ -24,4 +26,4 @@ def before_step(context, step):
 
 def after_step(context, step):
     time.sleep(1)
-    print(f"<- End step: {step.name}")
+    print(f"<- End step: {step.name} passed")
